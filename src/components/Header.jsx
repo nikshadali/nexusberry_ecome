@@ -1,8 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useCart } from '../hook/CartContext'
+import UseFetch from '../api/UseFetch'
+import Loader from './Loader'
+
 
 const Header = () => {
+  const {data} = UseFetch('https://fakestoreapi.com/products')
+  
+  const categries = [...new Set(data.map(item => item.category))]
   const {cart} = useCart()
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
@@ -33,6 +39,22 @@ const Header = () => {
               Products
             </Link>
           </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Category
+          </a>
+         
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li className="nav-item">
+            {categries.map(item => (
+              <Link className="nav-link active" aria-current="page" to={`/category/${item}`}>
+             {item}
+            </Link>
+            ))}
+            
+          </li>
+          </ul>
+        </li>
         </ul>
 
         <div className="cart">
