@@ -47,6 +47,7 @@ a{
 }
 .com-card{
   min-height: 400px;
+  cursor: pointer;
 }
 footer{
   background-color:#1c1d1c;
