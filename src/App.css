@@ -52,3 +52,9 @@ footer{
   background-color:#1c1d1c;
  
 }
+.fas {
+  cursor: pointer;
+}
+.fa-trash{
+  color:red;
+}
