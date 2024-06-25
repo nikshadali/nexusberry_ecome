@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CartCard = ({item, index, incQty, decQty}) => {
+const CartCard = ({item, index, incQty, decQty, delCartItem}) => {
   return (
     <div className="card rounded-3 mb-4">
     <div className="card-body p-4">
@@ -43,7 +43,7 @@ const CartCard = ({item, index, incQty, decQty}) => {
         
         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
           <a href="#!" className="text-danger">
-            <i className="fas fa-trash fa-lg" />
+            <i className="fas fa-trash fa-lg" onClick={() =>delCartItem(item.id)} />
           </a>
         </div>
       </div>

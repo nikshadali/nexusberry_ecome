@@ -23,6 +23,10 @@ const CartPage = () => {
           setCart(qtyArr)
          }
     }
+    const delCartItem = (i) => {
+        setCart(prev => prev.filter(item => item.id !== i))
+
+    }
 
 if(cart.length < 1){
     return (
@@ -46,7 +50,7 @@ if(cart.length < 1){
           </div>
         </div>
         {cart.map((item, index) => (
-             <CartCard item={item} index={index} key={item.id} incQty={incQty} decQty={decQty}/>
+             <CartCard item={item} index={index} key={item.id} incQty={incQty} decQty={decQty} delCartItem={delCartItem}/>
         ))}
       
        
