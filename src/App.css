@@ -7,6 +7,9 @@ a{
   text-decoration: none;
   color: inherit;
 }
+a:hover{
+  color: inherit;
+}
 .cart{
   position: relative;
  
@@ -27,7 +30,10 @@ a{
 }
 .category-card{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: lightgray;
+  background-color: blue;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
 }
 .category-img{
   width: 100%;
