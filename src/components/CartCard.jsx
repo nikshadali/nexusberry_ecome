@@ -42,9 +42,9 @@ const CartCard = ({item, index, incQty, decQty, delCartItem}) => {
         </div>
         
         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-          <a href="#!" className="text-danger">
+         
             <i className="fas fa-trash fa-lg" onClick={() =>delCartItem(item.id)} />
-          </a>
+         
         </div>
       </div>
     </div>
