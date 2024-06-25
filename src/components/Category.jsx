@@ -9,7 +9,7 @@ const Category = ({ categries }) => {
         <h4>All Categories</h4>
         {categries.map((item, i) => (
           
-          <div className="col-md-3" key={i}>
+          <div className="col-md-3 mt-4" key={i}>
             <Link to={`/category/${item.category}`}>
              <Card className="category-card">
              <Card.Img variant="top" src={item.image} className="category-img" />
