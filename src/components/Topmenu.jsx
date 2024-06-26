@@ -45,7 +45,7 @@ const Topmenu = ({cart}) => {
               <span>
                 <Link to='./cart'>
                 <p style={{fontSize:'10px', color:'#666'}} >Check out</p>
-                <p style={{color:'#fff',fontWeight:'600'}}>{cart.length}</p>
+                <p style={{color:'#fff',fontWeight:'600'}}>{cart.length} Products</p>
                 </Link>
                 </span>
             </div>
