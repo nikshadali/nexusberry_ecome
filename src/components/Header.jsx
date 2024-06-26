@@ -18,7 +18,7 @@ const Header = () => {
      
     <div className="container logo">
       <Link className="navbar-brand" to="/">
-       Ecommerce
+       ECOMMERCE
       </Link>
       <button
         className="navbar-toggler"
