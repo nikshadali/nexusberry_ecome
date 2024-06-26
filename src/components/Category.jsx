@@ -14,7 +14,7 @@ const Category = ({ categries }) => {
              <Card className="category-card">
              <Card.Img variant="top" src={item.image} className="category-img" />
              <Card.Body>
-               <Card.Text style={{fontSize:'20px'}}>
+               <Card.Text style={{fontSize:'20px', color:'#fff'}}>
                  {item.category}
                </Card.Text>
              </Card.Body>

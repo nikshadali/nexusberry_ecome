@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useCart } from '../hook/CartContext'
 import UseFetch from '../api/UseFetch'
 import Loader from './Loader'
+import Topmenu from './Topmenu'
 
 
 const Header = () => {
@@ -11,8 +12,11 @@ const Header = () => {
   const categries = [...new Set(data.map(item => item.category))]
   const {cart} = useCart()
   return (
+    <>
+    <Topmenu cart={cart} />
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow">
-    <div className="container">
+     
+    <div className="container logo">
       <Link className="navbar-brand" to="/">
        Ecommerce
       </Link>
@@ -56,15 +60,10 @@ const Header = () => {
           </ul>
         </li>
         </ul>
-
-        <div className="cart">
-          <Link to='/cart'><i class="fa-solid fa-cart-shopping fa-2xl"></i></Link>
-        
-        <div className="cartCount">{cart.length}</div>
-        </div>
       </div>
     </div>
   </nav>
+  </>
   )
 }
 

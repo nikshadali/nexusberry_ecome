@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  font-family: "Poppins", sans-serif;
+}
 a{
   text-decoration: none;
   color: inherit;
@@ -10,9 +13,17 @@ a{
 a:hover{
   color: inherit;
 }
+.top-menu{
+  height: 150px;
+  background-color: #0aa0df;
+}
 .cart{
   position: relative;
  
+}
+.card-text{
+  font-size: 14px;
+  color: #888;
 }
 .cartCount{
   position: absolute;
@@ -21,16 +32,17 @@ a:hover{
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: blue;
-  color: #fff;
+  background-color: #fff;
+  color: #0aa0df;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 500;
+  font-weight: 500;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .category-card{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  background-color: blue;
+  background-color: #0aa0df;
   color: #fff;
   font-size: 20px;
   font-weight: 700;
@@ -38,11 +50,22 @@ a:hover{
 }
 .category-img{
   width: 100%;
-  height: 150px;
+  height: 250px;
+  transition: all 1s ease-in-out;
+  transform: scale(1.008);
   
 }
+.card-title{
+  color: #0aa0df;
+  font-weight: 600;
+  font-size: 15px;
+}
+.price{
+  color: #0aa0df;
+}
+
 .img-size{
-  height: 200px;
+  height: 180px;
   width: 100%;
   object-fit: contain;
   margin-top: 5px;
@@ -53,16 +76,70 @@ a:hover{
   
 }
 .com-card{
-  min-height: 400px;
+  min-height: 420px;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.com-card:hover{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 footer{
-  background-color:#1c1d1c;
+  background-color:#0aa0df;
  
+}
+.icon-style{
+  display: flex;
+  margin-bottom: 8px;
+  gap: 1px;
+  color: #fed83a;
+  align-items: center;
+}
+.reiw{
+  font-size: 13px;
+  margin-left: 5px;
+  color: #000;
 }
 .fas {
   cursor: pointer;
 }
 .fa-trash{
   color:red;
+}
+.btn-primary{
+  background-color: #0aa0df;
+  position: absolute;
+  bottom: 15px;
+  
+}
+.logo{
+  color: #0aa0df;
+}
+.navbar-brand{
+  color: #0aa0df !important;
+  font-weight: 700;
+}
+.top-menu-brand{
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+}
+p{
+  margin-bottom: 0;
+}
+.top-menu-circle{
+  display: flex;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  align-items:center;
+  justify-content: center;
+  transition: all 1s ease-in-out;
+
+}
+
+.top-menu-left, .top-menu-center, .top-menu-right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
