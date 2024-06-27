@@ -9,6 +9,7 @@ const CartPage = () => {
     const incQty = (i) => {
         setCart(prev => prev.map((item, index) => index === i ? {...item, qty: item.qty + 1, amt: (item.price * (item.qty + 1))} : item))
     }
+    
     const decQty = (i) => {
         const qtyArr = [...cart]
         
@@ -53,9 +54,7 @@ if(cart.length < 1){
              <CartCard item={item} index={index} key={item.id} incQty={incQty} decQty={decQty} delCartItem={delCartItem}/>
         ))}
       
-       
-       
-      <div class="card">
+         <div class="card">
           <div class="card-body d-flex ">
 
           <div className="col-md-5 ">

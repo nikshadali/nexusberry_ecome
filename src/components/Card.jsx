@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Star from "./Star";
 const Card = ({ item }) => {
-  console.log(item)
+  
   return (
     <div className="col-md-3 mt-4">
       <Link to={`/product/${item.id}`}>
