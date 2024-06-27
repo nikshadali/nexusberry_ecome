@@ -8,7 +8,7 @@ const Featured = ({data}) => {
   return (
     <div className='container mt-5'>
         <div className="row">
-            <h4>Featured Products</h4>
+            <h4 className='title'>Featured Products</h4>
             {fProduct?.map((item) => (
                <Card item={item} key={item.id}/>
             ))}

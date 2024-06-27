@@ -6,7 +6,7 @@ const Category = ({ categries }) => {
   return (
    <div className="container mt-5">
     <div className="row">
-        <h4>All Categories</h4>
+        <h4 className="title">All Categories</h4>
         {categries.map((item, i) => (
           
           <div className="col-md-3 mt-4" key={i}>
