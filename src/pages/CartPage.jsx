@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useCart } from '../hook/CartContext'
 import CartCard from '../components/CartCard'
+import { Link } from 'react-router-dom'
 
 const CartPage = () => {
     const {cart, setCart} = useCart()
@@ -65,7 +66,11 @@ if(cart.length < 1){
         </div>
           </div>
         </div>
+        <Link to='/products'>
+      <button className='btn btn-primary'>Back to Shopping</button>
+      </Link>
       </div>
+      
     </div>
   </div>
 </section>
