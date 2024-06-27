@@ -174,3 +174,21 @@ padding: 10px 50px;
   bottom: -10px;
   left: 15px;
 }
+.carousel-control-prev
+ {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 70px;
+  
+}
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  right: 70px;
+}

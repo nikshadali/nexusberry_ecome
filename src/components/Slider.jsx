@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { FaAngleLeft,FaAngleRight} from "react-icons/fa6";
 
 const Slider = () => {
   return (
@@ -15,11 +16,11 @@ const Slider = () => {
         </div>
       </div>
       <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+      <FaAngleLeft  color="#000" style={{width:'20px'}}/>
         <span className="visually-hidden">Previous</span>
       </button>
       <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+      <FaAngleRight  color="#000" style={{width:'20px'}}/>
         <span className="visually-hidden">Next</span>
       </button>
     </div>
