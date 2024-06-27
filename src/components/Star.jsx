@@ -6,7 +6,7 @@ const Star = ({star, review}) => {
         let num = index + 0.5;
 
         return (
-            <span>
+            <span key={index}>
             { star >= index + 1 ? (
                 <FaStar />
             ) : star >= num ? (

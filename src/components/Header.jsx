@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useCart } from '../hook/CartContext'
 import UseFetch from '../api/UseFetch'
-import Loader from './Loader'
 import Topmenu from './Topmenu'
 
 
@@ -43,15 +42,16 @@ const Header = () => {
               Products
             </Link>
           </li>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Category
           </a>
          
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
           <li className="nav-item">
+            
             {categries.map(item => (
-              <Link className="nav-link active" aria-current="page" to={`/category/${item}`}>
+              <Link className="nav-link active" aria-current="page" to={`/category/${item}`} key={item}>
              {item}
             </Link>
             ))}
