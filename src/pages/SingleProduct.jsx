@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import UseFetch from "../api/UseFetch"
 import { useCart } from "../hook/CartContext"
 import Loader from "../components/Loader"
+import Star  from '../components/Star'
 
 const SingleProduct = () => {
   const {id} = useParams()
@@ -37,16 +38,18 @@ const SingleProduct = () => {
   return (
     <div className="container mt-5">
       <div className="row border py-5 shadow">
-        <div className="col-md-6">
+        <div className="col-md-5">
           <img src={data.image} alt="" className="img-fluid single-img border" />
         </div>
-        <div className="col-md-6">
-          <h4>{data.category}</h4>
-          <h2>{data.title}</h2>
+        <div className="col-md-7">
+          <h5 style={{color:'#555'}}>{data.category}</h5>
+          <h3>{data.title}</h3>
+          <p style={{color:'#0aa0df', fontSize:'28px', fontWeight:'600', display:'inline-block'}}>Price: ${data.price}</p>
+         
           <p>{data.description}</p>
-          <h6>Reveiw: {data.rating.count}</h6>
-          <h6>Price: ${data.price}</h6>
-          <button className="btn btn-primary" onClick={() =>handleCart(data.id, data.image, data.price, data.title)}>Add to Cart</button>
+          <Star star={data.rating.rate} review={data.rating.count}/>
+          
+          <button className="btn btn-primary single-page-btn" onClick={() =>handleCart(data.id, data.image, data.price, data.title)}>Add to Cart</button>
         </div>
       </div>
    
