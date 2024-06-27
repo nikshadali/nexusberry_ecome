@@ -2,6 +2,7 @@ import UseFetch from '../api/UseFetch'
 import Category from '../components/Category'
 import Featured from '../components/Featured'
 import Loader from '../components/Loader'
+import Services from '../components/Services'
 
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
   return (
     <div className='home'>
     <Category categries={categries}/>
+    <Services />
     <Featured data={data}/>
     </div>
   )

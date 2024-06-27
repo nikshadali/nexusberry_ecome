@@ -143,3 +143,17 @@ p{
   align-items: center;
   gap: 8px;
 }
+.service {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 30px 0;
+  border-right: 1px solid lightgray;
+}
+.sevice-line{
+  padding: 30px 0;
+  background-color: #fff;
+}

@@ -11,7 +11,9 @@ const Topmenu = ({cart}) => {
             className="col-md-6 d-flex align-items-center top-menu-brand "
             style={{ height: "100%" }}
           >
-            ECOMMERCE
+           <Link  to="/">
+       ECOMMERCE
+      </Link>
           </div>
           <div
             className="col-md-6 d-flex align-items-center justify-content-between"
