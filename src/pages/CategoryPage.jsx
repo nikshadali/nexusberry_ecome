@@ -17,11 +17,12 @@ const CategoryPage = () => {
     return <div>Something going wrong</div>;
   }
   const catArr = data.filter((item) => item.category === cate);
+  let cateCapi = cate.charAt(0).toUpperCase() + cate.slice(1).toLowerCase()
 
   return (
     <div className="container mt-5">
       <div className="row">
-        <h4>{cate}</h4>
+        <h4 className="title">{cateCapi}</h4>
         {catArr.map((item) => (
           <Card item={item} key={item.id} />
         ))}
