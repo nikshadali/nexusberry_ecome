@@ -3,6 +3,7 @@ import UseFetch from "../api/UseFetch"
 import { useCart } from "../hook/CartContext"
 import Loader from "../components/Loader"
 import Star  from '../components/Star'
+import ErrorMessage from "../components/ErrorMessage"
 
 const SingleProduct = () => {
   const {id} = useParams()
@@ -32,7 +33,7 @@ const SingleProduct = () => {
     return <Loader/>
   }
   if(error){
-    return <div>Something going wrong</div>
+    return <ErrorMessage errorMess='Something going wrong' />
   }
  
   return (

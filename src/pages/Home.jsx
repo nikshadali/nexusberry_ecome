@@ -1,5 +1,6 @@
 import UseFetch from '../api/UseFetch'
 import Category from '../components/Category'
+import ErrorMessage from '../components/ErrorMessage'
 import Featured from '../components/Featured'
 import Loader from '../components/Loader'
 import Services from '../components/Services'
@@ -13,7 +14,7 @@ const Home = () => {
     return <Loader/>
   }
   if(error){
-    return <div>Some thing going wrong</div>
+    return <ErrorMessage errorMess='Something going wrong'/>
   }
    const newObj = {}
    data?.forEach(item => {

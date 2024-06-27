@@ -1,5 +1,6 @@
 import UseFetch from '../api/UseFetch'
 import Card from '../components/Card'
+import ErrorMessage from '../components/ErrorMessage'
 import Loader from '../components/Loader'
 const Products = () => {
   const {data, loading, error} = UseFetch('https://fakestoreapi.com/products')
@@ -8,7 +9,7 @@ const Products = () => {
     return <Loader/>
   }
   if(error){
-    return <div>Something going wrong</div>
+    return <ErrorMessage errorMess='Something going wrong'/>
   }
   return (
     <div className='container mt-5'>

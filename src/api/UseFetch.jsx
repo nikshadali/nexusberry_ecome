@@ -11,6 +11,9 @@ const UseFetch = (url) => {
                 setError(false)
                 setLoading(true)
                 const res = await fetch(url)
+                if(!res.ok){
+                    throw new Error('Invalid response from server')
+                }
                 const dataRes = await res.json()
                 setData(dataRes)
                 
